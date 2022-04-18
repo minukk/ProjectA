@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Account from './Test/Account';
 
-interface Props {}
-
-const App = ({}: Props) => {
-  return <div>Hi React</div>;
+const App: React.FC = () => {
+  return (
+    <div>
+      Hi React
+      <Account name='min' mbti='INJF' />
+    </div>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

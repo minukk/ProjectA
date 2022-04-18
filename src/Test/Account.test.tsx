@@ -1,13 +1,17 @@
-import { render } from '@testing-library/react';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import Account from './Account';
 
-it('matches snapshot', () => {
-  const utils = render(<Account name='min' mbti='INFJ' />);
-  expect(utils.container).toMatchSnapshot();
-});
-
-it('shows the props correctly', () => {
-  const utils = render(<Account name='min' mbti='INFJ' />);
-  utils.getByText('min');
-  utils.getByText('ABCD');
+describe('테스트', () => {
+  it('Account 컴포넌트 테스트', () => {
+    render(<Account name='min' mbti='INFJ' />);
+    const nameValue = screen.getByTestId('name');
+    expect(nameValue).toHaveTextContent('min');
+  });
+  it('Account 컴포넌트 테스트', () => {
+    render(<Account name='min' mbti='INFJ' />);
+    const mbtiValue = screen.getByTestId('mbti');
+    expect(mbtiValue).toHaveTextContent('INFJ');
+  });
 });
