@@ -5,9 +5,8 @@
   },
   "extends": [
     "airbnb",
+    "tslint-config-airbnb",
     "eslint-config-prettier",
-    "plugin:import/errors",
-    "plugin:import/warnings",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint"
   ],
