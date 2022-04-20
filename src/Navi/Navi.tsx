@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from '../Components/Button';
 
 const Navi = () => {
   return (
@@ -8,8 +9,8 @@ const Navi = () => {
         <h1>MU Board</h1>
         <Nav>
           <input placeholder='search' />
-          <div>회원가입</div>
-          <div>로그인</div>
+          <Button title='로그인' />
+          <Button title='회원가입' />
         </Nav>
       </Header>
     </>
@@ -19,6 +20,14 @@ const Navi = () => {
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
+  padding: 15px 20px 4px;
+  border-bottom: 1px solid ${(props) => props.theme.color.main};
+  color: ${(props) => props.theme.color.text};
+
+  > h1 {
+    font-size: 4rem;
+    color: ${(props) => props.theme.color.logo};
+  }
 `;
 
 const Nav = styled.nav`
