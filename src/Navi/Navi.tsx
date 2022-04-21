@@ -20,7 +20,8 @@ const Navi = () => {
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px 4px;
+  margin-bottom: 20px;
+  padding: 24px 40px 14px;
   border-bottom: 1px solid ${(props) => props.theme.color.main};
   color: ${(props) => props.theme.color.text};
 

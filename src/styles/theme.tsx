@@ -4,6 +4,7 @@ const color = {
   white: '#FFFFFF',
   black: '#222222',
   text: '#858080',
+  border: '#ddd',
 };
 
 const theme = {
