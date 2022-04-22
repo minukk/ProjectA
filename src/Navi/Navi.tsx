@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from '../Components/Button';
 
@@ -6,12 +7,14 @@ const Navi = () => {
   return (
     <>
       <Header>
-        <h1>MU Board</h1>
+        <h1>
+          <Link to='/'>MU Board</Link>
+        </h1>
         <Nav>
           <input placeholder='search' />
           <ButtonWrap>
-            <Button title='로그인' />
-            <Button title='회원가입' />
+            <Button title='로그인' link='/sign' />
+            <Button title='회원가입' link='/sign' />
           </ButtonWrap>
         </Nav>
       </Header>
