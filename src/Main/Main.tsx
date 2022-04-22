@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <MainWrap>
       {CARD_INFO.map((card, idx) => {
-        return <Card user={card} idx={idx} />;
+        return <Card key={card + idx} user={card} idx={idx} />;
       })}
     </MainWrap>
   );

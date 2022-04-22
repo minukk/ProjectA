@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ButtonProps } from 'src/Type/interface';
 import styled from 'styled-components';
 
-const Button = ({ title }: ButtonProps) => {
-  return <ButtonStyle>{title}</ButtonStyle>;
+const Button = ({ title, link }: ButtonProps) => {
+  return (
+    <Link to={link}>
+      <ButtonStyle type='button'>{title}</ButtonStyle>
+    </Link>
+  );
 };
 
 const ButtonStyle = styled.button`
