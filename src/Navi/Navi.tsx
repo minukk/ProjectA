@@ -9,8 +9,10 @@ const Navi = () => {
         <h1>MU Board</h1>
         <Nav>
           <input placeholder='search' />
-          <Button title='로그인' />
-          <Button title='회원가입' />
+          <ButtonWrap>
+            <Button title='로그인' />
+            <Button title='회원가입' />
+          </ButtonWrap>
         </Nav>
       </Header>
     </>
@@ -33,7 +35,24 @@ const Header = styled.header`
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+
+  > input {
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid ${(props) => props.theme.color.main};
+    border-radius: 6px;
+    text-align: center;
+    color: ${(props) => props.theme.color.text};
+  }
+`;
+
+const ButtonWrap = styled.div`
+  display: flex;
+  width: 30%;
 `;
 
 export default Navi;

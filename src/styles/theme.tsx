@@ -5,6 +5,7 @@ const color = {
   black: '#222222',
   text: '#858080',
   border: '#ddd',
+  hover: '#10b35c',
 };
 
 const theme = {

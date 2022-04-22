@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
-import Routes from './Routes';
+import Router from './Router';
 import GlobalStyle from './styles/GlobalStyle';
 import theme from './styles/theme';
 
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <ThemeProvider theme={theme}>
-    <Routes />
+    <Router />
     <GlobalStyle />
   </ThemeProvider>,
 );
