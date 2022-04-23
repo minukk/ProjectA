@@ -7,14 +7,14 @@ const Main = () => {
   return (
     <main>
       <CardWrap>
-        {/* {CARD_INFO.map((card, idx) => {
+        {CARD_INFO.map((card, idx) => {
           return <Card key={card + idx} user={card} idx={idx} />;
-        })} */}
-        {Array(10)
+        })}
+        {/* {Array(10)
           .fill(0)
           .map(() => {
             return <Skeleton />;
-          })}
+          })} */}
       </CardWrap>
     </main>
   );

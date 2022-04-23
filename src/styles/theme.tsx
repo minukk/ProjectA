@@ -8,8 +8,15 @@ const color = {
   hover: '#10b35c',
 };
 
+const size = {
+  mobile: '768px',
+  tablet: '1024px',
+  desktop: '1700px',
+};
+
 const theme = {
   color,
+  size,
 };
 
 export default theme;
