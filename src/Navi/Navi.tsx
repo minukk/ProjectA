@@ -16,6 +16,11 @@ const Navi = () => {
             <Button title='로그인' link='/sign' />
             <Button title='회원가입' link='/sign' />
           </ButtonWrap>
+          <BuggerMenu>
+            <div />
+            <div />
+            <div />
+          </BuggerMenu>
         </Nav>
       </Header>
     </>
@@ -33,6 +38,9 @@ const Header = styled.header`
   > h1 {
     font-size: 4rem;
     color: ${(props) => props.theme.color.logo};
+
+    @media screen and (max-width: ${(props) => props.theme.size.tablet}) {
+    }
   }
 `;
 
@@ -56,6 +64,23 @@ const Nav = styled.nav`
 const ButtonWrap = styled.div`
   display: flex;
   width: 30%;
+
+  @media screen and (max-width: ${(props) => props.theme.size.tablet}) {
+    display: none;
+  }
+`;
+
+const BuggerMenu = styled.div`
+  > div {
+    width: 25px;
+    height: 3px;
+    background-color: ${(props) => props.theme.color.black};
+    margin: 5px;
+  }
+
+  @media screen and (min-width: ${(props) => props.theme.size.tablet}) {
+    display: none;
+  }
 `;
 
 export default Navi;
